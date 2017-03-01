@@ -1,0 +1,17 @@
+<h1>Answer Question</h1>
+
+
+{% for question in question_list %}
+    {{ forloop.counter }}.
+    {{ question.question_text }} :: 
+{% for choice in question.choice_set.all %}
+    {% if choice.select_choice %}
+    {{ choice.choice_text }} <br>
+    {% endif %}
+{% endfor %}
+{% endfor %}
+
+<br><a href="{% url 'myquiz:index' %}">back to menu</a></br>
+
+
+

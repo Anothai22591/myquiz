@@ -1,0 +1,11 @@
+<h1>You Score</h1>
+
+{{point}}  point.<br><br>
+{% for i in user_ans %}
+     {{ forloop.counter }}.
+     {{i}}<br>
+{% endfor %}
+
+<br><a href="{% url 'myquiz:show_score' %}">Answer</a></br>
+<a href="{% url 'myquiz:index' %}">back to menu</a>
+
