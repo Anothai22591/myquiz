@@ -1,3 +1,7 @@
+{% load static %}
+<html>
+<link rel="stylesheet" type="text/css" href="{% static 'myapp/style.css' %}" />
+<body>
 <h1>Answer Question</h1>
 
 
@@ -11,7 +15,10 @@
 {% endfor %}
 {% endfor %}
 
-<br><a href="{% url 'myquiz:index' %}">back to menu</a></br>
+<br><a href="{% url 'myquiz:index' %}">back to menu</a>
+<br><a href="{% url 'index' %}">back main</a></br>
+</html>
+    
 
 
 

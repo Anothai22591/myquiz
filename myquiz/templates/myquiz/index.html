@@ -1,29 +1,13 @@
+{% load static %}
 <html>
-<head>
+<link rel="stylesheet" type="text/css" href="{% static 'myapp/style.css' %}" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {
-    background-color: lightblue;
-}
-
-h1 {
-    color: white;
-    text-align: center;
-}
-a {
-    color: white;
-    font-family: verdana;
-    font-size: 20px;
-p {
-    font-family: verdana;
-    font-size: 20px;
-}
-</style>
-</head>
 <body>
-<h1>Wellcome to Cartoon quiz</h1>
-    <center><i class="fa fa-car" style="font-size:48px;color:yellow;"></i></center>
-    <center><a href="{% url 'myquiz:detail' %}">Start quiz</a></br></center>
-    
+    <center><h1>Wellcome to Cartoon quiz</h1></center>
+    <center><i class="fa fa-car" style="font-size:48px;color:red;"></i></center>
+    <center><a href="{% url 'myquiz:detail' %}">Start quiz</a></center>
+    <center><a href="{% url 'index' %}">back main</a></br></center>
 </body>
 </html>
+    
+

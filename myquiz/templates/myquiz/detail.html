@@ -1,30 +1,7 @@
+{% load static %}
 <html>
-<head>
-<style>
-body {
-    background-color: lightblue;
-}
-
-h1 {
-    color: back;
-    text-align: center;
-}
-.button {
-    background-color: #ffb3ff;
-    border: none;
-    color: #990099;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
-</style>
-</head>
+<link rel="stylesheet" type="text/css" href="{% static 'myapp/style.css' %}" />
 <body>
-
 <h1>Quiz Cartoon</h1>
 <form action="{% url 'myquiz:results' %}" method="post">
 {% csrf_token %}
@@ -39,7 +16,7 @@ h1 {
 <br>
 {% endfor %}
 
-<input type="submit"class="button" value="submit" />
+<input type="submit" class="button" value="submit" />
 </form>
 
 </body>

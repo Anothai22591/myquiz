@@ -23,6 +23,6 @@ def results(request):
     context = {'point':point,'user_ans':user_ans}
     return render(request, 'myquiz/results.html', context)
 
-def show_score(request):
+def answer(request):
     question_list =  Question.objects.all()
-    return render(request, 'myquiz/show_score.html',{'question_list': question_list})
+    return render(request, 'myquiz/answer.html',{'question_list': question_list})
