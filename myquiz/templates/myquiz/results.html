@@ -5,9 +5,8 @@
 <h1>You Score</h1>
 
 {{point}}  point.<br><br>
-{% for i in user_ans %}
-     {{ forloop.counter }}.
-     {{i}}<br>
+{% for answer in user_ans %}
+     {{ forloop.counter }}.{{ answer.question }}. Result: {{ answer.given_answer }}<br>
 {% endfor %}
 
 <br><a href="{% url 'myquiz:answer' %}">Answer</a></br>
